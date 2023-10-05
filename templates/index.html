@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang ='en' dir = 'ltr'>
+<head>
+    <title>House Price Prediction using Linear Regression model</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+    </style>
+<!--    <script type="Text/js">-->
+<!--        <script>-->
+<!--    document.querySelector('form').addEventListener('submit', async function(event) {-->
+<!--        event.preventDefault();-->
+
+<!--        // Gather form data-->
+<!--        const formData = new FormData(this);-->
+<!--        const requestData = {};-->
+
+<!--        for (const [key, value] of formData.entries()) {-->
+<!--            requestData[key] = value;-->
+<!--        }-->
+
+<!--        // Perform AJAX request to your prediction endpoint-->
+<!--        try {-->
+<!--            const response = await fetch('/predict', {-->
+<!--                method: 'POST',-->
+<!--                headers: {-->
+<!--                    'Content-Type': 'application/json',-->
+<!--                },-->
+<!--                body: JSON.stringify(requestData),-->
+<!--            });-->
+
+<!--            // Handle response, e.g., display the prediction result-->
+<!--            const result = await response.json();-->
+<!--            alert('Predicted House Price: $' + result.prediction);-->
+<!--        } catch (error) {-->
+<!--            console.error('Error:', error);-->
+<!--            alert('Error occurred while predicting house price. Please try again later.');-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+</head>
+    <body>
+        <div class = 'content'>
+            <h1 align='center'>House Price Prediction using Linear Regression model</h1>
+            <div class="form">
+                <form action="/predict" method="post">
+
+                    <input type="number" name="bedrooms" id ='bedrooms' placeholder="bedrooms">
+                    <input type="number" name="bathrooms" id ='bathrooms' placeholder="bathrooms">
+                    <input type="number" name="sqft_living" id ='sqft_living' placeholder="sqft_living">
+                    <input type="number" name="sqft_lot" id ='bathrsqft_lotooms' placeholder="sqft_lot">
+                    <input type="number" name="floors" id ='floors' placeholder="floors">
+                    <input type="number" name="waterfront" id ='waterfront' placeholder="waterfront">
+                    <input type="number" name="view" id ='view' placeholder="view">
+                    <input type="number" name="condition" id ='condition' placeholder="condition">
+                    <input type="number" name="sqft_above" id ='sqft_above' placeholder="sqft_above">
+                    <input type="number" name="sqft_basement" id ='sqft_basement' placeholder="sqft_basement">
+                    <input type="number" name="yr_built" id ='yr_built' placeholder="yr_built">
+                    <input type="number" name="yr_renovated" id ='yr_renovated' placeholder="yr_renovated">
+
+                    <input type="submit" vlaue = 'Predict'>
+
+                </form>
+            </div>
+
+
+
+        </div>
+    </body>
+</html>
